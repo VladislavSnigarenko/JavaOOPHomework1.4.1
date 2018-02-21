@@ -4,21 +4,21 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Network myNetork = new Network("MTS");
+		Network myNetwork = new Network("MTS");
 
 		Phone myPhone = new Phone("095-215-97-16");
-		myPhone.registerInNetwork(myNetork);
+		myPhone.registerInNetwork(myNetwork);
 
 		Phone friendPhone = new Phone("050-015-66-00");
-		friendPhone.registerInNetwork(myNetork);
+		friendPhone.registerInNetwork(myNetwork);
 
 		// good
-		myPhone.call(myNetork, "050-015-66-00");
+		myPhone.call(myNetwork, "050-015-66-00");
 
 		System.out.println("");
 
 		// bad
-		myPhone.call(myNetork, "111-222-33-44");
+		myPhone.call(myNetwork, "111-222-33-44");
 	}
 
 }
